@@ -3,6 +3,9 @@ import './App.css';
 import { useState } from "react";
 import { Dialog } from "@mui/material";
 import Header from './components/Header/Header';
+import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
+import AutoDeleteIcon from '@mui/icons-material/AutoDelete';
+import EditIcon from '@mui/icons-material/Edit';
 
 function App() {
   const [openDialogue, setOpenDialogue] = useState(false);
@@ -11,6 +14,47 @@ function App() {
     <div className="App">
 
       <Header setOpenDialogue={setOpenDialogue} />
+
+      <ul className="taskList">
+
+        <div className="task">
+          <div className="title">Title</div>
+          <div className="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora magni placeat architecto. Aperiam ipsum dolorum expedita, voluptatibus enim numquam nihil eius a voluptas.</div>
+          <div className="task-footer">
+            <div className="date">
+              25-06-1997
+            </div>
+            <div className="actions">
+              <button className="btn btn-edit">
+                <EditIcon />
+              </button>
+              <button className="btn btn-delete">
+                <DeleteOutlineIcon />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div className="task">
+          <div className="title">Title</div>
+          <div className="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora magni placeat architecto. Aperiam ipsum dolorum expedita, voluptatibus enim numquam nihil eius a voluptas.</div>
+          <div className="task-footer">
+            <div className="date">
+              25-06-1997
+            </div>
+            <div className="actions">
+              <button className="btn btn-edit">
+                <EditIcon />
+              </button>
+              <button className="btn btn-delete">
+                <DeleteOutlineIcon />
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </ul>
+
 
       <Dialog open={openDialogue} onClose={() => setOpenDialogue(false)} >
 				<div className="dialogue">
