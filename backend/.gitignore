@@ -1,0 +1,8 @@
+# dependencies
+/include
+/Lib
+/Scripts
+
+# from project
+/root/*/__pycache__
+/root/db.sqlite3
