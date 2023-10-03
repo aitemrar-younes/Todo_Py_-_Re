@@ -3,7 +3,18 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <h1>hello</h1>
+
+      <div className="header">
+        <div className="header_title">
+          My Tasks
+        </div>
+        <button className="btn">
+          New Task ?
+        </button>
+      </div>
+
+      
+
     </div>
   );
 }
