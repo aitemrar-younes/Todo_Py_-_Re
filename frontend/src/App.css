@@ -22,7 +22,7 @@ input,textarea{
 }
 input:focus,textarea:focus{
   /* outline: 1px solid rgb(0, 221, 147); */
-  box-shadow: 0 0 5px rgb(0, 221, 147);
+  box-shadow: 0 0 5px 1px rgb(0, 221, 147, 0.7);
   border-color: transparent;
 }
 
@@ -38,6 +38,7 @@ input:focus,textarea:focus{
 .dialogue_title{
   font-size: 25px;
   margin-bottom: 20px;
+  font-weight: 600;
 }
 .dialogue .btn{
   font-size: 16px;
