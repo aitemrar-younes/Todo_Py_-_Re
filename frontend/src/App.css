@@ -15,6 +15,15 @@ input,textarea{
   resize: none;
   font-size: 15px;
   outline: none;
+  border: none;
+  border: 1px solid #cacaca;
+  border-radius: 5PX;
+  letter-spacing: 0.5PX;
+}
+input:focus,textarea:focus{
+  /* outline: 1px solid rgb(0, 221, 147); */
+  box-shadow: 0 0 5px rgb(0, 221, 147);
+  border-color: transparent;
 }
 
 .app{
