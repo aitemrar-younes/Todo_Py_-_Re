@@ -9,31 +9,34 @@ button{
   outline: none;
   cursor: pointer;
 }
+input,textarea{
+  padding: 8px;
+  margin: 8px 0;
+  resize: none;
+  font-size: 15px;
+  outline: none;
+}
 
 .app{
   width: 100vw;
 }
-.header{
-  height: 55px;
-  width: 100%;
-  background-color: rgb(0, 221, 147);
-  padding: 0 40px;
-
+.dialogue{
+  min-width: 550px;
+  padding: 20px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
 }
-.header_title{
-  font-size: 26px;
-  font-weight: 600;
-  color: #fff;
+.dialogue_title{
+  font-size: 25px;
+  margin-bottom: 20px;
 }
-.btn{
+.dialogue .btn{
   font-size: 16px;
   font-weight: 550;
-  padding: 5px 15px;
+  margin-top: 20px;
+  padding: 8px 15px;
   border-radius: 3px;
-  color: rgb(0, 221, 147);
-  background-color: #fff;
+  color: #fff;
+  background-color: rgb(0, 221, 147);
+  font-size: 17px;
 }
