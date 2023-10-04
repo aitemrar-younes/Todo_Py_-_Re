@@ -34,6 +34,7 @@ input:focus,textarea:focus{
   padding: 20px;
   display: flex;
   flex-direction: column;
+  overflow: auto;
 }
 .dialogue_title{
   font-size: 25px;
@@ -50,61 +51,13 @@ input:focus,textarea:focus{
   background-color: rgb(0, 221, 147);
   font-size: 17px;
 }
+.dialogue .btn:hover{
+  background-color: rgb(3, 170, 114);
+}
 
 .taskList{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px , 1fr));
   padding: 30px;
   gap: 20px;
-}
-.task{
-  background-color: #fff;
-  padding: 25px;
-  padding-bottom: 5px;
-  border-left: 4px solid rgb(0, 221, 147);
-  border-radius: 5px;
-  box-shadow: 0 0 15px rgb(0, 0, 0, 0.1);
-  transition: all 0.1s ease-in-out;
-}
-.task:hover{
-  transform: scale(1.05);
-}
-.task .title{
-  font-size: 18px;
-  font-weight: 600;
-}
-.task .desc{
-  font-weight: 400;
-  color: #555;
-}
-.task-footer{
-  margin-top: 10px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-.task .date{
-  font-weight: 600;
-}
-.task .actions{
-}
-.task .btn{
-  padding: 7px;
-  border-radius: 5px;
-  background-color: transparent;
-}
-.task .btn.btn-delete{
-  color: #ff4646;
-}
-.task .btn.btn-edit{
-  color: rgb(0, 221, 147);
-}
-.task .btn:hover.btn-delete{
-  background-color: #ff4646;
-  color: #fff;
-}
-.task .btn:hover.btn-edit{
-  background-color: rgb(0, 221, 147);
-  color: #fff;
 }

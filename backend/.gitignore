@@ -5,4 +5,8 @@
 
 # from project
 /root/*/__pycache__
+/root/*/migrations
+/root/*/__init__.py
+/root/*/*/__init__.py
+/root/*/*/__pycache__
 /root/db.sqlite3
