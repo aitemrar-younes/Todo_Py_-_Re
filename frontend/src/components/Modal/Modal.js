@@ -4,7 +4,7 @@ import { Dialog } from "@mui/material";
 import Select from "react-select";
 
 
-const Modal = ({openModal, closeModal, task, setTask, submit_data, children}) => {
+const Modal = ({openModal, closeModal, /* task */ title, description, color, setTask, submit_data, children}) => {
 
 	const endPoint = "http://127.0.0.1:8000/api/todo/";
 	const [colors, setColors] = useState([]);
@@ -40,14 +40,11 @@ const Modal = ({openModal, closeModal, task, setTask, submit_data, children}) =>
               type="text"
               className="input"
               placeholder="Title"
-              value={task.title}
-              onChange={(value) =>
-                setTask({ ...task, title: value.target.value })
-              }
+              ref={title}
             />
             <Select
-              ref={refColor}
-              onChange={choice => setTask({...task, color:choice.value})}
+              ref={color}
+              onChange={choice => color.current.value = choice.value}
               options={colors.map((color) => ({
                 value: color.id,
                 label: color.name,
@@ -55,10 +52,7 @@ const Modal = ({openModal, closeModal, task, setTask, submit_data, children}) =>
               }))}
             />
             <textarea
-              value={task.description}
-              onChange={(value) =>
-                setTask({ ...task, description: value.target.value })
-              }
+              ref={description}
               name=""
               id=""
               cols="30"

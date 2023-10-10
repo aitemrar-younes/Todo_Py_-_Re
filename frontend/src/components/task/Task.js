@@ -5,7 +5,7 @@ import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import EditIcon from "@mui/icons-material/Edit";
 
 const Task = ({ task }) => {
-  console.log(task);
+  /* console.log(task); */
   return (
     <div className="task" key={task.id}>
       <div className="title">{task.title}</div>
