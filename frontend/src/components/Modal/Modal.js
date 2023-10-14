@@ -8,7 +8,7 @@ const Modal = ({openModal, closeModal, /* task */ title, description, color, set
 
 	const endPoint = "http://127.0.0.1:8000/api/todo/";
 	const [colors, setColors] = useState([]);
-	const refColor = useRef();
+  
     const retrieve_colors_data = () => {
 		fetch(endPoint + "color/")
 		  .then((response) => {

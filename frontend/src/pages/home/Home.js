@@ -29,7 +29,7 @@ const Home = () => {
       <Modal
         openModal={openDialogue}
         closeModal={() => setOpenDialogue(false)}
-		title={taskTitleRef}
+		    title={taskTitleRef}
         description={taskDescriptionRef}
         color={taskColorRef}
         submit_data={submit_data}
