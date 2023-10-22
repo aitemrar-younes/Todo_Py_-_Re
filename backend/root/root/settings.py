@@ -23,10 +23,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-u$lj&ikg14adzwu50nf#j^!4h=xph8jhe1b2$8!wvc@ulr2%i)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+""" DEBUG = False """
+DEBUG = True
+""" ALLOWED_HOSTS = ["*"] """
 
-ALLOWED_HOSTS = ["*"]
-
+""" import mimetypes
+mimetypes.add_type("text/css", ".css", True) """
 
 # Application definition
 
