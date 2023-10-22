@@ -4,6 +4,7 @@ from rest_framework.pagination import LimitOffsetPagination, PageNumberPaginatio
 
 from ..models import Color, Task
 from .serializers import ColorSerializer, TaskSerializerDetail
+from .filters import TaskFilter
 
 class LargeResultsSetPagination(PageNumberPagination):
     page_size = 1000
@@ -38,6 +39,12 @@ class TaskListPaginationView_V2(generics.ListAPIView):
     filter_backends = [filters.SearchFilter, filters.OrderingFilter]
     search_fields = ['title']
     ordering_fields = ['title']
+
+class TaskListPaginationView_V3(generics.ListAPIView):
+    queryset = Task.objects.all()
+    serializer_class = TaskSerializerDetail
+    pagination_class = StandardResultsSetPagination
+    filterset_class = TaskFilter
 
 class TaskDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Task.objects.all()
